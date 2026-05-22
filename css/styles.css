@@ -1,0 +1,406 @@
+/* ==========================================================================
+   ESTILOS GLOBALES - CAFETERÍA KATIUX
+   ========================================================================== */
+
+:root {
+    --blanco: #ffffff;
+    --oscuro: #4a2831;         /* Marrón café oscuro */
+    --primario: #db7093;       /* Rosado medio para botones y enlaces activos */
+    --secundario: #e8d7d0;     /* Crema/Café claro pastel para la barra de navegación */
+    --gris-fondo: #fcf8f6;     /* Fondo de página cálido y suave */
+    --gris-formulario: #6e6e6e;/* Gris oscuro para el fondo del formulario de reservas */
+    --rosa-suave: #fff0f5;     /* Fondo sutil rosa */
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Krub", Arial, sans-serif;
+    background-color: var(--gris-fondo);
+    color: var(--oscuro);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   HEADER Y TÍTULO PRINCIPAL
+   ========================================================================== */
+
+.header-sitio {
+    padding: 2rem 0;
+    background-color: var(--blanco);
+}
+
+.TITULO {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--oscuro);
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.TITULO span {
+    font-size: 1.8rem;
+    color: var(--primario);
+    display: block;
+    margin-top: 0.5rem;
+    font-family: "Krub", sans-serif;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* ==========================================================================
+   NAVEGACIÓN PRINCIPAL
+   ========================================================================== */
+
+.nav-bg {
+    background-color: var(--secundario);
+    border-top: 1px solid rgba(74, 40, 49, 0.1);
+    border-bottom: 1px solid rgba(74, 40, 49, 0.1);
+}
+
+.navegacion-principal {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.navegacion-principal a {
+    display: block;
+    text-align: center;
+    padding: 1.5rem 3rem;
+    color: var(--oscuro);
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navegacion-principal a:hover,
+.navegacion-principal a.activo {
+    background-color: var(--primario);
+    color: var(--blanco);
+}
+
+/* ==========================================================================
+   HERO / BANNER PRINCIPAL
+   ========================================================================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    max-height: 450px;
+    overflow: hidden;
+    background-color: #9c8c87;
+}
+
+.imagen-banner {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.contenido-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(74, 40, 49, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.contenido-hero p {
+    color: var(--blanco);
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.contenido-hero svg {
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+}
+
+/* ==========================================================================
+   COMPONENTES Y BOTONES
+   ========================================================================== */
+
+.contenedor {
+    max-width: 120rem;
+    width: 95%;
+    margin: 4rem auto;
+}
+
+h2 {
+    font-size: 3.2rem;
+    color: var(--oscuro);
+    text-align: center;
+    margin-bottom: 4rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.boton {
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    padding: 1.2rem 4rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--primario);
+}
+
+.sombra {
+    box-shadow: 0px 10px 30px rgba(74, 40, 49, 0.08);
+    background-color: var(--blanco);
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+}
+
+/* ==========================================================================
+   SECCIÓN DE ESPECIALIDADES / PRODUCTOS (GRID)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+    .lenguajes {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.lenguaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blanco);
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(74, 40, 49, 0.1);
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease;
+}
+
+.lenguaje:hover {
+    transform: translateY(-5px);
+}
+
+.lenguaje h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    color: var(--oscuro);
+    text-align: center;
+}
+
+.lenguaje img {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.lenguaje p {
+    line-height: 1.6;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #666;
+    margin: 0;
+}
+
+/* ==========================================================================
+   FORMULARIO DE CONTACTO Y RESERVAS (GRIS OSCURO ASIGNADO)
+   ========================================================================== */
+
+.formulario {
+    background-color: var(--gris-formulario); /* Gris de tus capturas */
+    width: min(70rem, 100%);
+    margin: 4rem auto;
+    padding: 4rem 3rem;
+    border-radius: 0.8rem;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--blanco) !important; /* Texto blanco */
+    letter-spacing: 1px;
+}
+
+.contenedor-campos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+    
+    .campo:nth-child(3),
+    .campo:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    color: var(--blanco) !important; /* Letras blancas */
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.input-text {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 0.6rem;
+    background-color: #f0f4f8; /* Color claro de tus inputs */
+    color: #333333;
+    font-size: 1.6rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-text:focus {
+    border-color: var(--primario);
+    background-color: var(--blanco);
+}
+
+.campo textarea.input-text {
+    height: 14rem;
+    resize: none;
+}
+
+/* Sección del botón ENVIAR */
+.enviar {
+    margin-top: 1rem;
+}
+
+.enviar .boton {
+    width: 100%;
+    background-color: var(--primario); /* Botón Rosado */
+    color: var(--blanco);
+    padding: 1.6rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.6rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.enviar .boton:hover {
+    background-color: #c71585;
+}
+
+
+/* ==========================================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+
+.footer {
+    background-color: var(--blanco);
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 6rem;
+    font-size: 1.5rem;
+    color: var(--oscuro);
+    border-top: 1px solid rgba(74, 40, 49, 0.1);
+}
+
+.footer p {
+    margin: 0;
+    font-weight: 500;
+}
+/* ==========================================================================
+   BARRA DE ALERTAS DINÁMICAS (JAVASCRIPT)
+   ========================================================================== */
+
+.error {
+    background-color: #ff0000; /* Rojo intenso para llamar la atención */
+    color: #ffffff;            /* Texto blanco */
+    text-align: center;
+    padding: 1.5rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    border-radius: 0.6rem;
+    margin-top: 2rem;          /* Separa la alerta del botón ENVIAR */
+    width: 100%;               /* Hace que ocupe todo el ancho disponible */
+    box-sizing: border-box;    /* Evita que el padding ensanche de más el bloque */
+    grid-column: 1 / -1;       /* Si usas Grid, esto hace que abarque todas las columnas */
+}
+
+.correcto {
+    background-color: #008000; /* Verde para éxito */
+    color: #ffffff;            /* Texto blanco */
+    text-align: center;
+    padding: 1.5rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    border-radius: 0.6rem;
+    margin-top: 2rem;          /* Separa la alerta del botón ENVIAR */
+    width: 100%;               /* Hace que ocupe todo el ancho disponible */
+    box-sizing: border-box;    /* Evita que el padding ensanche de más el bloque */
+    grid-column: 1 / -1;       /* Si usas Grid, esto hace que abarque todas las columnas */
+}
