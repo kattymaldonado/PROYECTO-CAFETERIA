@@ -1,15 +1,11 @@
-/* ==========================================================================
-   ESTILOS GLOBALES - CAFETERÍA KATIUX
-   ========================================================================== */
-
 :root {
     --blanco: #ffffff;
-    --oscuro: #4a2831;         /* Marrón café oscuro */
-    --primario: #db7093;       /* Rosado medio para botones y enlaces activos */
-    --secundario: #e8d7d0;     /* Crema/Café claro pastel para la barra de navegación */
-    --gris-fondo: #fcf8f6;     /* Fondo de página cálido y suave */
-    --gris-formulario: #6e6e6e;/* Gris oscuro para el fondo del formulario de reservas */
-    --rosa-suave: #fff0f5;     /* Fondo sutil rosa */
+    --oscuro: #4a2831;         
+    --primario: #db7093;       
+    --secundario: #e8d7d0;    
+    --gris-fondo: #fcf8f6;
+    --gris-formulario: #6e6e6e;
+    --rosa-suave: #fff0f5;     
 }
 
 html {
@@ -27,10 +23,6 @@ body {
     padding: 0;
     line-height: 1.6;
 }
-
-/* ==========================================================================
-   HEADER Y TÍTULO PRINCIPAL
-   ========================================================================== */
 
 .header-sitio {
     padding: 2rem 0;
@@ -57,10 +49,6 @@ body {
     text-transform: none;
     letter-spacing: 0;
 }
-
-/* ==========================================================================
-   NAVEGACIÓN PRINCIPAL
-   ========================================================================== */
 
 .nav-bg {
     background-color: var(--secundario);
@@ -191,9 +179,7 @@ h2 {
     border-radius: 1rem;
 }
 
-/* ==========================================================================
-   SECCIÓN DE ESPECIALIDADES / PRODUCTOS (GRID)
-   ========================================================================== */
+
 
 @media (min-width: 768px) {
     .lenguajes {
@@ -246,9 +232,7 @@ h2 {
     margin: 0;
 }
 
-/* ==========================================================================
-   FORMULARIO DE CONTACTO Y RESERVAS (GRIS OSCURO ASIGNADO)
-   ========================================================================== */
+
 
 .formulario {
     background-color: var(--gris-formulario); /* Gris de tus capturas */
@@ -273,7 +257,7 @@ h2 {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 3rem;
-    color: var(--blanco) !important; /* Texto blanco */
+    color: var(--blanco) !important; 
     letter-spacing: 1px;
 }
 
@@ -303,7 +287,7 @@ h2 {
 }
 
 .campo label {
-    color: var(--blanco) !important; /* Letras blancas */
+    color: var(--blanco) !important; 
     font-weight: 600;
     font-size: 1.6rem;
     margin-bottom: 0.8rem;
@@ -314,7 +298,7 @@ h2 {
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 1.5rem;
     border-radius: 0.6rem;
-    background-color: #f0f4f8; /* Color claro de tus inputs */
+    background-color: #f0f4f8; 
     color: #333333;
     font-size: 1.6rem;
     outline: none;
@@ -331,14 +315,13 @@ h2 {
     resize: none;
 }
 
-/* Sección del botón ENVIAR */
 .enviar {
     margin-top: 1rem;
 }
 
 .enviar .boton {
     width: 100%;
-    background-color: var(--primario); /* Botón Rosado */
+    background-color: var(--primario); 
     color: var(--blanco);
     padding: 1.6rem;
     font-size: 1.8rem;
@@ -355,10 +338,6 @@ h2 {
 }
 
 
-/* ==========================================================================
-   PIE DE PÁGINA (FOOTER)
-   ========================================================================== */
-
 .footer {
     background-color: var(--blanco);
     text-align: center;
@@ -371,36 +350,34 @@ h2 {
 
 .footer p {
     margin: 0;
+
     font-weight: 500;
 }
-/* ==========================================================================
-   BARRA DE ALERTAS DINÁMICAS (JAVASCRIPT)
-   ========================================================================== */
 
 .error {
-    background-color: #ff0000; /* Rojo intenso para llamar la atención */
-    color: #ffffff;            /* Texto blanco */
+    background-color: #ff0000; 
+    color: #ffffff;            
     text-align: center;
     padding: 1.5rem;
     font-weight: bold;
     font-size: 1.8rem;
     border-radius: 0.6rem;
-    margin-top: 2rem;          /* Separa la alerta del botón ENVIAR */
-    width: 100%;               /* Hace que ocupe todo el ancho disponible */
-    box-sizing: border-box;    /* Evita que el padding ensanche de más el bloque */
-    grid-column: 1 / -1;       /* Si usas Grid, esto hace que abarque todas las columnas */
+    margin-top: 2rem;          
+    width: 100%;             
+    box-sizing: border-box;    
+    grid-column: 1 / -1;      
 }
 
 .correcto {
-    background-color: #008000; /* Verde para éxito */
-    color: #ffffff;            /* Texto blanco */
+    background-color: #008000; 
+    color: #ffffff;            
     text-align: center;
     padding: 1.5rem;
     font-weight: bold;
     font-size: 1.8rem;
     border-radius: 0.6rem;
-    margin-top: 2rem;          /* Separa la alerta del botón ENVIAR */
-    width: 100%;               /* Hace que ocupe todo el ancho disponible */
-    box-sizing: border-box;    /* Evita que el padding ensanche de más el bloque */
-    grid-column: 1 / -1;       /* Si usas Grid, esto hace que abarque todas las columnas */
+    margin-top: 2rem;         
+    width: 100%;               
+    box-sizing: border-box; 
+    grid-column: 1 / -1;       
 }
